@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Playpen+Sans:wght@100..800&display=swap');
+
+:root {
+  --font-playful: 'Playpen Sans', 'Comic Relief', cursive, sans-serif;
+}
+
+*,
+*::before,
+*::after,
+html,
+body,
+button,
+input,
+textarea,
+select {
+  font-family: 'Playpen Sans', 'Comic Relief', cursive, sans-serif !important;
+}
+
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: var(--font-playful);
+    color: #121212;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  code, kbd, samp, pre {
+    font-family: 'Playpen Sans', 'Comic Relief', cursive, sans-serif !important;
+  }
+}
+
+/* Hide scrollbars for slick horizontal rail scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Tinted Liquid Chromic Glass System */
+.liquid-glass-card {
+  position: relative;
+  backdrop-filter: blur(22px) saturate(180%);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow:
+    0 16px 36px -6px rgba(0, 0, 0, 0.08),
+    inset 0 2px 4px 0 rgba(255, 255, 255, 0.85),
+    inset 0 -2px 5px 0 rgba(255, 255, 255, 0.45),
+    inset 0 0 18px 2px rgba(255, 255, 255, 0.35);
+  overflow: hidden;
+}
+
+.liquid-glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 48%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.03) 100%);
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.glass-lilac {
+  background: radial-gradient(120% 100% at 30% 0%, rgba(214, 197, 255, 0.88) 0%, rgba(214, 197, 255, 0.62) 100%);
+}
+
+.glass-skyblue {
+  background: radial-gradient(120% 100% at 30% 0%, rgba(210, 231, 255, 0.88) 0%, rgba(210, 231, 255, 0.62) 100%);
+}
+
+.glass-apricot {
+  background: radial-gradient(120% 100% at 30% 0%, rgba(255, 223, 166, 0.88) 0%, rgba(255, 223, 166, 0.62) 100%);
+}
+
+.glass-rose {
+  background: radial-gradient(120% 100% at 30% 0%, rgba(255, 212, 229, 0.88) 0%, rgba(255, 212, 229, 0.62) 100%);
+}
+
+.glass-cyan {
+  background: radial-gradient(120% 100% at 30% 0%, rgba(190, 242, 255, 0.88) 0%, rgba(165, 230, 252, 0.65) 100%);
+}
+
+.glass-amber {
+  background: radial-gradient(120% 100% at 30% 0%, rgba(254, 235, 185, 0.90) 0%, rgba(252, 211, 143, 0.65) 100%);
+}
+
+.glass-emerald {
+  background: radial-gradient(120% 100% at 30% 0%, rgba(209, 250, 229, 0.90) 0%, rgba(167, 243, 208, 0.65) 100%);
+}
+
+.glass-slate {
+  background: radial-gradient(120% 100% at 30% 0%, rgba(226, 232, 240, 0.92) 0%, rgba(203, 213, 225, 0.68) 100%);
+}
+
+/* Lightweight Hardware-Accelerated Trade 3D Keyframe Animations */
+@keyframes slowOrbit {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-4px) rotate(1.5deg); }
+}
+
+@keyframes electricPulse {
+  0%, 100% { filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.45)); transform: scale(1); }
+  50% { filter: drop-shadow(0 0 14px rgba(251, 191, 36, 0.85)); transform: scale(1.03); }
+}
+
+@keyframes fanRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes shimmerGlint {
+  0%, 100% { opacity: 0.4; transform: scale(0.9) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.2) rotate(45deg); }
+}
+
+@keyframes beaconPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(0.85); }
+}
+
+@keyframes gearRotateCW {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes gearRotateCCW {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+@keyframes dropletBob {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-3px) scale(1.02); }
+}
+
+/* CSS Animation Helper Classes with transform-gpu & will-change */
+.animate-slow-orbit {
+  animation: slowOrbit 18s linear infinite;
+  transform-origin: 60px 60px;
+  will-change: transform;
+}
+
+.animate-gentle-float {
+  animation: gentleFloat 4s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.animate-electric-pulse {
+  animation: electricPulse 3s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform, filter;
+}
+
+.animate-fan-rotate {
+  animation: fanRotate 8s linear infinite;
+  transform-origin: 60px 60px;
+  will-change: transform;
+}
+
+.animate-hvac-fan {
+  animation: fanRotate 7s linear infinite;
+  transform-origin: 50px 50px;
+  will-change: transform;
+}
+
+.animate-shimmer-glint {
+  animation: shimmerGlint 3s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+.animate-beacon-pulse {
+  animation: beaconPulse 2s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+.animate-gear-cw {
+  animation: gearRotateCW 12s linear infinite;
+  transform-origin: 48px 52px;
+  will-change: transform;
+}
+
+.animate-gear-ccw {
+  animation: gearRotateCCW 8s linear infinite;
+  transform-origin: 82px 78px;
+  will-change: transform;
+}
+
+.animate-droplet-bob {
+  animation: dropletBob 3.5s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform;
+}

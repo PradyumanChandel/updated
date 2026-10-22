@@ -1,0 +1,6 @@
+{
+  "name": "Magikscill Pro - Field Dispatch & Work Orders",
+  "description": "High-productivity mobile dispatch and daily work order manager for certified field pros with escrow tracking, camera watermark, and instant UPI payouts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
